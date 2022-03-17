@@ -1,10 +1,11 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <router-view/>
-    <b style="color: red; font-size: 50px;">这是马凯旋的VUE项目</b>
     <!-- 路由没起作用的原因是必须加下面的router -->
-    <router-view></router-view>
+    <router-view/>
+    
+    <b style="color: red; font-size: 50px;">这是马凯旋的VUE项目</b>
+   
   </div>
 </template>
 

@@ -134,7 +134,83 @@ npm i element-ui -S
 
 ~~~vue
 cnpm install vue-router@4(版本太高 容易出错)
-npm install vue-router@3.1.0 --save
+cnpm install vue-router@3.1.0 --save
 ~~~
 
-VUE中引入router（现在创建好的工程里面都自动配置好了）
+新建../view/Home.vue
+
+~~~vue
+<template>
+    <div>我是home页面</div>
+</template>
+
+<script>
+// import {defineAsyncComponent} from '@vue/composition-api'
+export default ({
+    name: 'Home',
+    data(){
+        return {}
+
+    }
+})
+
+</script>
+~~~
+
+router的index.js
+
+~~~javascript
+import Vue from 'vue'
+import Router from 'vue-router'
+import HelloWorld from '@/components/HelloWorld'
+// 引入home页面
+// import Home from '../views/Home.vue'
+
+Vue.use(Router)
+
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: () => import('../views/Home.vue')
+
+  }
+]
+
+const router = new Router({
+  mode: 'history',
+  routes
+})
+
+export default router
+
+~~~
+
+修改main.js
+
+~~~javascript
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue'
+import App from './App'
+// 引入router  修改路径
+import router from '../router'
+// 引入ElementUI
+import ElementUI from 'element-ui'
+// 引入ElementUI 样式文件
+import 'element-ui/lib/theme-chalk/index.css'
+
+Vue.config.productionTip = false
+// 将ElementUI注入到全局
+Vue.use(ElementUI)
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>'
+})
+
+~~~
+
