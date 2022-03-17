@@ -129,3 +129,12 @@ npm i element-ui -S
   </script>
 </html>
 ```
+
+### 路由的使用
+
+~~~vue
+cnpm install vue-router@4(版本太高 容易出错)
+npm install vue-router@3.1.0 --save
+~~~
+
+VUE中引入router（现在创建好的工程里面都自动配置好了）

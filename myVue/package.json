@@ -10,9 +10,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@vue/composition-api": "^1.4.9",
     "element-ui": "^2.15.6",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
