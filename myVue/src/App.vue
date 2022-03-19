@@ -9,8 +9,7 @@
     <router-link to="/user">
       <el-button type="warning">用户信息</el-button>
     </router-link>
-    <!-- <br/>
-    <b style="color: red; font-size: 50px;">这是马凯旋的VUE项目</b> -->
+    <!-- <b style="color: red; font-size: 50px;">这是马凯旋的VUE项目</b> -->
   </div>
 </template>
 
