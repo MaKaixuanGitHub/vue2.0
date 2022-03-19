@@ -1,7 +1,5 @@
 <template>
   <div class="hello">
-    <el-button type="primary">正常</el-button>
-    <el-button type="warning">警告</el-button>
   </div>
 </template>
 
