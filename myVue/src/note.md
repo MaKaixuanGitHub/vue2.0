@@ -73,6 +73,8 @@ vue init webpack ”项目名称“ (项目名称不可以用驼峰命名法)
 
 ### Element UI使用
 
+[Layout 布局 (组件) - Element UI 中文开发手册 - 开发者手册 - 云+社区 - 腾讯云 (tencent.com)](https://cloud.tencent.com/developer/section/1489863)
+
 > Element UI是VUE框架所支持的UI库，他能在我们开发过程中快速生成我们的UI样式
 > 并且它的组件能够做到开箱即用bug少，样式美观
 
@@ -131,6 +133,8 @@ npm i element-ui -S
 ```
 
 ### 路由的使用
+
+#### 安装
 
 ~~~vue
 cnpm install vue-router@4(版本太高 容易出错)
@@ -219,3 +223,46 @@ new Vue({
 
 
 ### 首页架子的搭建
+
+#### ElementUI参考手册
+
+
+
+
+
+### axios的基本使用
+
+[基本用例 | Axios 中文文档 | Axios 中文网 (axios-http.cn)](https://www.axios-http.cn/docs/example)
+
+#### 安装
+
+npm安装
+
+~~~sh
+npm install axios
+~~~
+
+CDN引入
+
+~~~html
+<script src="https://unpkg.com/axios/dist/axios.mn.js"></script>
+~~~
+
+下载完成后在main.js中进行全局的引入
+
+~~~javascript
+import http from 'axios'
+
+// axios 不是一个插件，想要全局的使用，需要绑定在prototype上，然后再在页面上的生命周期中可以使用
+// 即Get Post Put Delete
+VueRouter.prototype.$http = http;
+~~~
+
+
+
+
+
+
+
+
+

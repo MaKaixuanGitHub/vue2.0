@@ -83,11 +83,11 @@
       
       <el-main>
         <el-table :data="tableData">
-          <!-- <el-table-column prop="date" label="日期" width="140">
-          </el-table-column>
-          <el-table-column prop="name" label="姓名" width="120">
-          </el-table-column>
-          <el-table-column prop="address" label="地址"> -->
+           <el-table-column v-for="(val, key) in tableLabel" 
+                            :key="key"
+                            :prop="key" 
+                            :label="val">
+            </el-table-column>
           </el-table-column>
         </el-table>
       </el-main>
@@ -112,13 +112,35 @@
 <script>
   export default {
     data() {
-      const item = {
-        date: '',
-        name: '',
-        address: ''
-      };
       return {
-        tableData: Array(0).fill(item)
+        // tableData: Array(0).fill(item),
+        tableData: [
+          {
+          name: 'vivo',
+          todayBuy:'300',
+          monthBuy:'100',
+          totalBuy:'800'
+          },
+          {
+          name: 'iphone',
+          todayBuy:'100',
+          monthBuy:'100',
+          totalBuy:'500'
+          },
+          {
+          name: 'huawei',
+          todayBuy:'200',
+          monthBuy:'100',
+          totalBuy:'500'
+          },
+        ],
+        tableLabel: {
+          name: '课程',
+          todayBuy:'今日购买',
+          monthBuy:'本月购买',
+          totalBuy:'总计购买'
+
+        }
       }
     }
   };
